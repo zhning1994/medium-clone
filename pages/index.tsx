@@ -5,14 +5,14 @@ import Header from '../components/Header'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="mx-auto max-w-7xl ">
       <Head>
         <title>Medium Blog Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <div>
+      <div className="flex items-center justify-between  bg-[#fcbc2d] py-10 lg:py-0">
         <div className="space-y-5 px-10">
           <h1 className="max-w-xl font-serif text-6xl">
             <span className="underline decoration-[#fcbc2d] decoration-4">
@@ -25,7 +25,12 @@ const Home: NextPage = () => {
             world better.
           </h2>
         </div>
-        <img src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png" />
+
+        <img
+          className="hidden h-32 md:inline-flex lg:h-full"
+          src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png"
+          alt="Medium"
+        />
       </div>
     </div>
   )
