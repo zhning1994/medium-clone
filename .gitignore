@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+sanityyoutubeclone/node_modules
+sanityyoutubeclone/dist
+
 # testing
 /coverage
 
@@ -35,3 +38,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
