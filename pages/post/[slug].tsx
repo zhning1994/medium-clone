@@ -3,12 +3,39 @@ import { sanityClient, urlFor } from '../../sanity';
 import { Post } from '../../typings';
 import { GetStaticProps } from 'next';
 import PortableText from 'react-portable-text';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+interface IFormInput {
+  _id: string;
+  name: string;
+  email: string;
+  comment: string;
+}
 
 interface Props {
   post: Post;
 }
 
 function Post({ post }: Props) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    await fetch('/api/createComment', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+      .then(() => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <main>
       <Header />
@@ -16,7 +43,7 @@ function Post({ post }: Props) {
       <img
         className="h-40 w-full object-cover"
         src={urlFor(post.mainImage).url()}
-        alt=""
+        alt="banner"
       />
 
       <article className="mx-auto max-w-3xl p-5">
@@ -60,15 +87,22 @@ function Post({ post }: Props) {
 
       <hr className="mx-auto my-5 max-w-lg border-2 border-[#fcbc2d]" />
 
-      <form className="mx-auto mb-10 flex max-w-2xl flex-col p-5">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="mx-auto mb-10 flex max-w-2xl flex-col p-5"
+      >
         <h3 className="text-base font-bold text-[#fcbc2d]">
           Do you like this article?
         </h3>
         <h4 className="text-3xl font-bold">Leave a comment down below!</h4>
         <hr className="mt-2 py-3" />
+
+        <input {...register('_id')} type="hidden" name="_id" value={post._id} />
+
         <label className="mb-5 block">
           <span className="text-gray-700">Name</span>
           <input
+            {...register('name', { required: true })}
             className="mt-2 block w-full rounded-lg border py-2 px-3 shadow outline-none ring-[#fcbc2d] focus:ring"
             placeholder="Jonathan Johnson"
             type="text"
@@ -77,6 +111,7 @@ function Post({ post }: Props) {
         <label className="mb-5 block">
           <span className="text-gray-700">Email</span>
           <input
+            {...register('email', { required: true })}
             className="mt-2 block w-full rounded-lg border py-2 px-3 shadow outline-none ring-[#fcbc2d] focus:ring"
             placeholder="xxx@gmail.com"
             type="text"
@@ -85,11 +120,30 @@ function Post({ post }: Props) {
         <label className="mb-5 block">
           <span className="text-gray-700">Comment</span>
           <textarea
+            {...register('comment', { required: true })}
             className="form-textarea mt-2 block w-full rounded-lg border py-2 px-3 shadow outline-none ring-[#fcbc2d] focus:ring"
             placeholder="Let us know yours thought"
             rows={8}
           />
         </label>
+
+        <div className="flex flex-col p-5">
+          {errors.name && (
+            <span className="text-red-500">- The Name Field is required</span>
+          )}
+          {errors.comment && (
+            <span className="text-red-500">
+              - The Comment Field is required
+            </span>
+          )}
+          {errors.email && (
+            <span className="text-red-500">- The Email Field is required</span>
+          )}
+        </div>
+        <input
+          className="focus:shadow-outline cursor-pointer rounded bg-[#fcbc2d] py-2 px-4 font-bold text-white shadow transition-transform duration-200 ease-in-out hover:bg-[#ffb108] focus:outline-none"
+          type="submit"
+        />
       </form>
     </main>
   );
