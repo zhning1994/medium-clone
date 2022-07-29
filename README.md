@@ -1,21 +1,51 @@
-# Next.js + Tailwind CSS Example
+# Medium Clone - Nextjs and Sanity.io project
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Hi 👋, I'm Low Zhen Ning
+========================
 
-## Deploy your own
+### A catechumen who just start to exploring tech development world
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+🌱 I’m currently learning React.js, React Native, Docker and more. 
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+📫 How to reach me : 
+- Email : lowzn94@gmail.com
+- Facebook : https://www.facebook.com/laurence.low.3/
+- LinkedIn : https://www.linkedin.com/in/zhen-ning-low-13b415202/
 
-## How to use
+## Purpose of Project
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+This is first project that I built with using Next.js, TypeScript, and also Sanity.io. I want to get familiar with Next.js and TypeScript, and I do see guru on YouTube building their apps server on Sanity.io, rather than MongoDB or postgresql it is very interesting I want to try it out.  
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+It is very convenient to create and amend data on Sanity.io, even though it is using GROQ (Graph-Relational Object Queries) language, I think it is a good CMS. 
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+This project just clone the layout of Medium for learning purpose, and I setup up all the post info in Sanity.io, others features such as authentication, din't included in this project. 
+
+## Layout of Project
+
+![Medium](https://user-images.githubusercontent.com/60384726/181787393-322ebb44-4660-40b9-9fcf-26e3a2e2553a.PNG)
+![MediumPost](https://user-images.githubusercontent.com/60384726/181787441-2e1d16b3-22bf-40b8-b842-74aa349fb350.PNG)
+![Comment](https://user-images.githubusercontent.com/60384726/181787502-dff9e843-33d8-45e3-a52a-83183c835272.PNG)
+
+
+
+Details of projects : 
+- Source Code : https://github.com/zhning1994/medium-clone
+- Demo : https://medium-clone-zhning1994.vercel.app/
+
+## :rocket: Tools and Technologies For Project
+- Next.js
+- Tailwind Css 
+- TypeScript
+- Sanity.io
+
+## How to Use the Project
+
+This project is just clone the outlook of Medium, therefore no features has been build. However, user of the project can view the post and give comment on post. Only the owner of this project can create post via sanity.io platform. 
+
+## Special Thanks to Credits
+
+Thank you ***Clever Programmer*** ! He is the motivation for me to keep learning and be humble always as there are so much things I don't even know in the tech field after watching his channel. Appreciate ***Clever Programmer*** for sharing his knowledge to millions of people in the world :hearts: 
+
+Here is his channel, a lots of great content : https://www.youtube.com/c/CleverProgrammer
+
+
