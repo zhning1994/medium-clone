@@ -10,7 +10,7 @@
 📫 How to reach me : 
 - Email : lowzn94@gmail.com
 - Facebook : https://www.facebook.com/laurence.low.3/
-- LinkedIn : https://www.linkedin.com/in/zhen-ning-low-13b415202/
+- LinkedIn : https://www.linkedin.com/in/zhen-ning-low/
 
 ## Purpose of Project
 
