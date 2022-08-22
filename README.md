@@ -3,7 +3,7 @@
 ## Hi 👋, I'm Low Zhen Ning
 ========================
 
-### A catechumen who just start to exploring tech development world
+### A freshman who just start to exploring tech development world
 
 🌱 I’m currently learning React.js, React Native, Docker and more. 
 
